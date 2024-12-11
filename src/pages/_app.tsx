@@ -60,4 +60,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default app;
+export default MyApp;
