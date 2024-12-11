@@ -20,8 +20,8 @@ const GoogleTagManager = ({ gtmId }: { gtmId: string }) => {
 };
 
 const TRACKING_ID = 'G-60ZNPPYEPB'; // Your Google Analytics ID
-const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_API_KEY;
-const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST;
+const POSTHOG_KEY = 'phc_MdnKXIuNgcDgKsopUz1bbJjsosGlkzoUTfjTdmJ3JjP';
+const POSTHOG_HOST = 'https://us.i.posthog.com';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
