@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { PostHogProvider } from 'posthog-js/react';
 import posthog from 'posthog-js';
 import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/next';
 
 // Google Tag Manager Component (fallback for the assumed package)
 const GoogleTagManager = ({ gtmId }: { gtmId: string }) => {
@@ -53,9 +54,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GoogleTagManager gtmId={TRACKING_ID} />
       <PostHogProvider client={posthog}>
         <Component {...pageProps} />
+        <Analytics />
       </PostHogProvider>
     </>
   );
 }
 
-export default MyApp;
+export default app;
